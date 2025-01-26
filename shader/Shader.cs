@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _3D_GFX_Exercises.shader
+namespace Übung.shader
 {
     class Shader
     {
@@ -195,12 +195,6 @@ namespace _3D_GFX_Exercises.shader
         {
             GL.UseProgram(Handle);
             GL.Uniform3(_uniformLocations[name], data);
-        }
-
-        public void SetBool(string name, bool value)
-        {
-            GL.UseProgram(Handle);
-            GL.Uniform1(_uniformLocations[name], value ? 1 : 0);
         }
     }
 }

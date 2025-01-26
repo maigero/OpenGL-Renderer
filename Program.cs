@@ -1,4 +1,4 @@
-namespace OpenGL_App
+namespace Übung
 {
     internal static class Program
     {

@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Übung.engine.Interfaces
 {
-    public interface IRenderAble
+    internal interface IHasTransformationInfo
     {
-        public Matrix4 doRender(Matrix4 parentTransformation);
+        public Matrix4 transformationData { get; }
     }
 }

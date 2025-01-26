@@ -1,20 +1,19 @@
 ﻿#version 330 core
 
-in vec2 TexCoord; // From vertex shader
-uniform sampler2D textureUnit;
-uniform bool useTexture;
-uniform vec3 color; // Fallback color
+uniform vec3 color; // A UNIFORM
 out vec4 fragColor;
+in vec2 textureCoord;
+uniform int useColor;
+uniform sampler2D textureUnit;
 
 void main()
 {
-	if(useTexture)
-	{
-		fragColor = texture(textureUnit, TexCoord);
-	}
-	else
+	if(useColor != 0)
 	{
 		fragColor = vec4(color, 1.0);
 	}
-	
+	else
+	{
+		fragColor = texture(textureUnit, textureCoord);
+	}
 } 
